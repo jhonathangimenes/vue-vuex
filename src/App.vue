@@ -1,24 +1,38 @@
 <template>
   <div id="app">
+
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <h1 class="display-4">Vuex</h1>
+        <p class="lead">Padrão de Gerenciamento de Estado Centralizado no Vue.</p>
       </div>
     </div>
+
     <div class="container">
-      <Contador/>
+
+      <div class="row">
+        <div class="col-sm-9 border-right">
+          <TarefasLista />
+        </div>
+        <div class="col-sm-3">
+          <Contador />
+        </div>
+      </div>
+
     </div>
+
   </div>
 </template>
 
 <script>
+
 import Contador from '@/components/Contador.vue'
+import TarefasLista from '@/components/TarefasLista.vue'
 
 export default {
-  name: 'app',
   components: {
-    Contador
+    Contador,
+    TarefasLista
   }
 }
 </script>
